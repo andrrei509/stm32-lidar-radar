@@ -26,7 +26,7 @@ This project is a 2D scanning system (Mini LiDAR Radar) that maps its surroundin
 The STM32U5 acts as the central controller. The stepper motor sweeps the VL53L0X sensor across a 180-degree field of view. The MCU reads distance data via I2C and translates polar coordinates into Cartesian coordinates. This data is pushed via the same I2C bus to the OLED display. The GPIO and Timer peripherals drive the status LEDs and the PWM passive buzzer based on proximity thresholds.
 
 > [!NOTE] 
-> Add your hardware schematic or wiring diagram here.
+> Add hardware schematic or wiring diagram here.
 > `![Hardware Schematic](./images/schematic.png)`
 
 ### Software Design
@@ -39,7 +39,7 @@ The firmware is entirely asynchronous, utilizing the Embassy framework to ensure
 4. **Security Task:** Evaluates the distance; if an object is within the critical zone, it triggers the PWM buzzer and the corresponding directional LED.
 
 > [!NOTE] 
-> Add your software flowchart or state machine diagram here.
+> Add software flowchart or state machine diagram here.
 > `![Software Architecture](./images/software_arch.png)`
 
 ## 🚀 How to Run
@@ -48,3 +48,17 @@ The firmware is entirely asynchronous, utilizing the Embassy framework to ensure
    ```bash
    git clone [https://github.com/](https://github.com/)[YourUsername]/stm32-lidar-radar.git
    cd stm32-lidar-radar
+   ```
+2. Ensure you have the correct Rust target installed:
+   ```bash
+   rustup target add thumbv8m.main-none-eabihf
+   ```
+3. Flash the firmware to the STM32 board using `probe-rs`:
+   ```bash
+   cargo run --release
+   ```
+```
+
+***
+
+GitHub Markdown supports a tool called **Mermaid.js**, which allows you to write your software architecture flowcharts directly in the text of the README without needing to draw and upload separate image files. Would you like me to generate the Mermaid code block for your software architecture diagram so you can drop it straight into that section?
