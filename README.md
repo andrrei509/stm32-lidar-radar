@@ -57,6 +57,6 @@ The firmware is entirely asynchronous, utilizing the Embassy framework to ensure
    ```bash
    cargo run --release
    ```
-```
+
 
 
