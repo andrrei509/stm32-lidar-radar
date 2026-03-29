@@ -59,6 +59,4 @@ The firmware is entirely asynchronous, utilizing the Embassy framework to ensure
    ```
 ```
 
-***
 
-GitHub Markdown supports a tool called **Mermaid.js**, which allows you to write your software architecture flowcharts directly in the text of the README without needing to draw and upload separate image files. Would you like me to generate the Mermaid code block for your software architecture diagram so you can drop it straight into that section?
